@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #525252;
+    border: none;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab-button.active {
+    background-color: #242424;
+    border-bottom: 2px solid #bb0000;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .total-time-table {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #recalculateBtn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #eb8c20;
+  }
+  
+  #errorList {
+    color: red;
+    font-size: 0.9em;
+  }
+
+  #weekControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  #weekLabel {
+    font-weight: bold;
+    padding: 0 8px;
+    /*color: #333;*/
+  }
+
+  .metrics {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  } 
+  
+  button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+
+  }
+  
+  button:hover {
+    background-color: #125ea5;
+  }
+  
+  .primary-button {
+  background-color: #1976d2;
+  color: white;
+  width: 100%;
+}
+
+.secondary-button {
+  background-color: #f1f1f1;
+  color: #222;
+  width: 100%;
+}
+
+#goalSection {
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+#desiredHours {
+  width: 80px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#clockOutSuggestion {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+
+/* 🌙 Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+
+  .tab-button {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+
+  .tab-button.active {
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #f5f5f5;
+  }
+
+  #weekControls {
+    background: #1f1f1f;
+    box-shadow: none;
+  }
+
+  .primary-button {
+    background-color: #64b5f6;
+    color: #000;
+  }
+
+  .secondary-button {
+    background-color: #333;
+    color: #fff;
+  }
+
+  #errorList {
+    color: #ff8a80;
+  }
+
+  input, button {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #555;
+  }
+}
+  

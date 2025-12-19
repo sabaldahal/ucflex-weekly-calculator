@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UC Flex Weekly Hours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-button active" data-tab="total">Total</button>
+    <button class="tab-button" data-tab="errors">Errors</button>
+  </div>
+
+  <div id="tab-total" class="tab-content active">
+    <div id="weekControls">
+      <button id="prevWeekBtn">Prev</button>
+      <span id="weekLabel">Loading...</span>
+      <button id="nextWeekBtn">Next</button>
+    </div>
+
+    <div class="metrics">
+      <div><strong>Total Hours:</strong> <span id="totalTime">Calculating...</span></div>
+      <div><strong>Hours:</strong> <span id="totalHours">...</span></div>
+      <div><strong>Minutes (UCFlex):</strong> <span id="decimalMinutes">...</span></div>
+      <div><strong>Minutes (Actual):</strong> <span id="actualMinutes">...</span></div>
+    </div>
+
+    <div id="goalSection">
+      <label for="desiredHours">Desired Total Hours:</label>
+      <input type="number" id="desiredHours" min="0" step="0.25" placeholder="eg. 20" value="20.00">
+    
+      <div id="clockOutSuggestion">Time Remaining: --:--</div>
+      <div id="clockOutAt">Clock Out At: --:--</div>
+    </div>
+
+
+    <button id="recalculateBtn" class="primary-button">Recalculate</button>
+  </div>
+
+  <div id="tab-errors" class="tab-content">
+    <button id="clearErrorsBtn" class="secondary-button">Clear Errors</button>
+    <ul id="errorList"></ul>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
